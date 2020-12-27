@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实验四——自主实验1</title>
+	</head>
+	
+	<body>
+	<script>
+		var m = 0, n = 0;
+		var s = new String(prompt("请输入字符："));
+		function isNumber(value) { 
+			var patrn = /^(-)?\d+(\.\d+)?$/;
+			if (patrn.exec(value) == null || value == "") 
+				document.write(value+" 不是数字");
+			else {
+				document.write(value+" 是数字");
+				document.write("<br />");
+				document.write("转化成浮点数为："+parseFloat(s)); 
+				document.write("<br />");
+				document.write("转化成整数为："+parseInt(s));
+			}
+		}
+		isNumber(s);
+		document.write("<br />");
+	</script>
+	</body>
+</html> 
+

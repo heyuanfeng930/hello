@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实验四——自主实验2</title>
+	</head>
+	
+	<body>
+	<script>
+		do{
+			var num1 = parseInt(Math.random()*11);
+			var num2 = parseInt(Math.random()*11);
+			var num3 = parseInt(Math.random()*11);
+		}while(num1 == num2 || num1 == num3 || num2 == num3)
+		document.write("三个幸运号码为：");
+		document.write(num1+" "+num2+" "+num3);
+		document.write("<br />");
+	</script>
+	</body>
+</html>

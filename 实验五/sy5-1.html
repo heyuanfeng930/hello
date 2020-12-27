@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Document</title>
+	</head>
+	
+	<script type="text/javascript">
+		/*当表单元素获得焦点时调用该函数*/
+		function getFocus() { document.bgColor="blue";}
+		
+		/*当表单元素失去焦点时调用该函数*/
+		function loseFocus() { document.bgColor="white";}
+		
+		/*当表单提交时调用该函数*/
+		function submitTest() {
+			var msg = "表单数据的获取：\n"; 
+			msg += "用户名:";
+			var username = document.getElementById("input1").value; 
+			msg += username;
+			msg += "，\n 密码：";
+			var psw = document.getElementById("input2").value; 
+			msg += psw;
+			alert(msg); 
+		}
+		
+		/*当表单发生重置事件时调用该函数*/
+		function resetTest() {alert("将数据清空");}
+	</script>
+	
+	<body>	
+	<center>
+		<form onSubmit="submitTest()" onReset="resetTest()"/>
+			<fieldset height=500px >
+				<legend align=center>表单事件实例</legend>
+				<br/>
+				用户名：<input type="text" id="input1" /> <br/>
+				密&nbsp;&nbsp;&nbsp;码：<input type="password" id="input2"/><br/><br/>
+				
+				<!--"获表得/失去焦点触发事件"按钮获得、失去焦点事件及处理代码-->
+				<input type="button" value="获得/失去焦点触发事件" onFocus="getFocus()" onBlur="loseFocus()"><br />
+				<!--表单提交、重置事件及处理代码-->
+				<input type="submit" value="提交" >
+				<input type="reset" value="重置" />
+			</fieldset>
+		</form>
+	</center>
+	</body>
+</html>

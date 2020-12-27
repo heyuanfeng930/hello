@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实验四——自主实验4</title>
+	</head>
+	
+	<body>
+	
+    <script>
+        var email = new String(prompt("请输入邮箱"));
+		var index1 = email.indexOf('@');
+		var index2 = email.indexOf('.');
+		var n = email.length;
+        if(index1 != -1 && index2 != -1){
+			if(index1 != 0 && index2 != n-1){
+				if(index2-index1 > 2)
+					document.write("邮箱合法");	
+				else document.write("邮箱不合法");	
+			}
+			else document.write("邮箱不合法");	
+		}
+		else document.write("邮箱不合法");					
+    </script>
+	</body>
+</html>

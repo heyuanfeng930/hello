@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>键盘事件处理</title>
+	</head>
+	
+	<body>	
+		<script>
+			function keyDown() {
+				var key=event.keyCode;  
+				alert(" 您按下的键的代码是："+key);
+			}
+		</script>
+		
+		<form>请按键:
+			<input type="text" onKeyDown="keyDown();">
+		</form>
+	</body>
+</html>

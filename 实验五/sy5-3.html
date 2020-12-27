@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<style>
+			form{text-align:center;} 
+			div{background:#33ff99; width:400px; height:200px; margin:0 auto;}
+		</style>
+	</head>
+	
+	<body>	
+	<div id="c">
+		<h3 align=center>鼠标事件处理</h3> 
+		<hr color=red>
+		<form onmouseover="mover()" onmouseout="mout()" onmousemove="mmove()" onmousedown="mdown()" onclick="mclick()" ondblclick="mdclick()">
+			<input type="text" id="mouse" value="" >
+		</form>
+	</div>
+	<script>
+		var change = document.getElementById("mouse").value;
+		function mover(){  //当鼠标悬停于某个页面元素之上时，设置图层的背景色为“#99cc66”；	
+			document.getElementById("mouse").value = "移入";
+			c.style.backgroundColor="#99cc66";
+		}
+		function mout(){   //当鼠标移出时，设置图层的背景色为“#ff33ff”；
+			document.getElementById("mouse").value = "移出";
+			c.style.backgroundColor="#ff33ff";
+		}
+		function mmove(){  //当鼠标指导移动时，设置图层的背景色为“#0033ff”；
+			document.getElementById("mouse").value = "移动";
+			c.style.backgroundColor="#0033ff";
+		}
+		function mdown(){  //按下鼠标左键时，文本框中显示“按下鼠标”；
+			document.getElementById("mouse").value = "按下鼠标";
+		}
+		function mclick(){  //单击鼠标左键时，文本框中显示“单击鼠标”；
+			document.getElementById("mouse").value = "单击鼠标";
+		}
+		function mdclick(){  //双击鼠标左键时，文本框中显示“双击鼠标”；
+			document.getElementById("mouse").value = "双击鼠标";
+		}
+	</script>
+	
+	</body>
+</html>
+
+
